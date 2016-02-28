@@ -1,0 +1,23 @@
+<div class="container">
+<div class="jumbotron">
+  <h4> Welcome to WeatherApp</h4>
+</div>
+<div id="Entryform" ng-show ="formShow">
+<form id="weatherForm">
+  <label>Post Code:</label>
+  <input type = "number" ng-model="postcode">
+  <label>Country:</label>
+  <input type = "text" ng-model="country">
+  <input type="submit" ng-click="findWeather(postcode, country)">
+</form>
+</div>
+<div id="weatherInfo">
+<!--p ng-show="postcode">Searching for the Weather forecast for: {{postcode}}</p-->
+<p> Weather forecast for :{{forecast.name}}</p>
+<p> Current Temparature:{{forecast.main.temp}}</p>
+<p> Min Temparature:{{forecast.main.temp_min}}</p>
+<p> Max Temparature:{{forecast.main.temp_max}}</p>
+<p> Weather : {{forecast.weather.description}}</p>
+</div>
+</div>
+
